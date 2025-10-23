@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paweł Słota</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <header>
+        <h1>Paweł Słota</h1>
+        <nav>
+            <ul>
+                <li><a href="./login.html">Logowanie</a></li>
+                <li><a href="./uwagi.html">Uwagi</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <article>
+            <header>
+                <h1>Uwagi o formularzach HTML</h1>
+                <p>Analiza zalet, wad i praktycznych zastosowań formularzy HTML</p>
+            </header>
+
+            <section>
+                <h2>Własne uwagi i obserwacje</h2>
+                <p>Formularze HTML stanowią fundamentalny element interakcji użytkownika z serwisami internetowymi. Po zapoznaniu się z ich możliwościami, można wyciągnąć kilka kluczowych obserwacji:</p>
+                
+                <ul>
+                    <li><strong>Natywna walidacja</strong> to potężne narzędzie, ale ma ograniczone możliwości personalizacji komunikatów błędów</li>
+                    <li><strong>Dostępność</strong> jest wbudowana - przeglądarki automatycznie obsługują nawigację klawiaturową i czytniki ekranowe</li>
+                    <li><strong>Semantyka</strong> znaczników formularzy jest dobrze rozumiana przez przeglądarki, co przekłada się na lepsze doświadczenie użytkownika</li>
+                    <li><strong>Prostota implementacji</strong> kontrastuje z ograniczonymi możliwościami stylowania niektórych elementów</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Kiedy warto stosować formularze HTML</h2>
+                <p>Formularze HTML sprawdzają się doskonale w następujących scenariuszach:</p>
+                
+                <ul>
+                    <li><strong>Proste formularze kontaktowe</strong> - gdzie priorytetem jest szybkie wdrożenie</li>
+                    <li><strong>Formularze logowania i rejestracji</strong> - wykorzystujące wbudowaną walidację</li>
+                    <li><strong>Ankiety i kwestionariusze</strong> - gdzie dostępność jest kluczowa</li>
+                    <li><strong>Wyszukiwarki</strong> - korzystające z natywnego przesyłania danych</li>
+                    <li><strong>Aplikacje wymagające działania bez JavaScript</strong> - zapewniające podstawową funkcjonalność</li>
+                    <li><strong>Prototypowanie</strong> - szybkie testowanie pomysłów bez złożonego kodu</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Kiedy nie warto stosować formularzy HTML</h2>
+                <p>Istnieją sytuacje, gdzie czyste formularze HTML mogą być niewystarczające:</p>
+                
+                <ul>
+                    <li><strong>Złożone walidacje biznesowe</strong> - wymagające niestandardowej logiki</li>
+                    <li><strong>Dynamiczne formularze</strong> - gdzie pola pojawiają się/znikają w zależności od wyborów użytkownika</li>
+                    <li><strong>Formularze wieloetapowe</strong> - wymagające zapisywania stanu między krokami</li>
+                    <li><strong>Zaawansowane interakcje</strong> - jak drag-and-drop, autouzupełnianie z zewnętrznych API</li>
+                    <li><strong>Wymagania niestandardowego wyglądu</strong> - gdy projekt wymaga pełnej kontroli wizualnej</li>
+                    <li><strong>Integracje w czasie rzeczywistym</strong> - jak walidacja dostępności nazwy użytkownika</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Zalety formularzy HTML</h2>
+                <ul>
+                    <li><strong>Działanie bez JavaScript</strong> - gwarantują podstawową funkcjonalność</li>
+                    <li><strong>Wbudowana dostępność</strong> - wsparcie dla technologii asystujących</li>
+                    <li><strong>Szybkość implementacji</strong> - gotowe komponenty przeglądarki</li>
+                    <li><strong>Bezpieczeństwo</strong> - natywna ochrona przed niektórymi atakami</li>
+                    <li><strong>Kompatybilność</strong> - działają we wszystkich nowoczesnych przeglądarkach</li>
+                    <li><strong>SEO-friendly</strong> - semantyczna struktura wspiera pozycjonowanie</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Wady formularzów HTML</h2>
+                <ul>
+                    <li><strong>Ograniczona kontrola stylów</strong> - szczególnie dla elementów jak datepicker, colorpicker</li>
+                    <li><strong>Standardowe komunikaty błędów</strong> - trudne do personalizacji</li>
+                    <li><strong>Brak zaawansowanych funkcji</strong> - jak walidacja krzyżowa między polami</li>
+                    <li><strong>Ograniczenia walidacji</strong> - podstawowe wzorce i wymagane pola</li>
+                    <li><strong>Problem z responsywnością</strong> - niektóre elementy mogą nie wyglądać optymalnie na mobile</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Praktyczne wskazówki</h2>
+                <p>Na podstawie doświadczeń z formularzami HTML warto pamiętać o:</p>
+                
+                <ul>
+                    <li>Zawsze używaj <code>label</code> z atrybutem <code>for</code> dla lepszej dostępności</li>
+                    <li>Wykorzystuj odpowiednie <code>type</code> inputów dla lepszej semantyki i UX</li>
+                    <li>Stosuj <code>fieldset</code> i <code>legend</code> dla grup powiązanych pól</li>
+                    <li>Pamiętaj o atrybutach <code>required</code>, <code>pattern</code>, <code>min</code>/<code>max</code></li>
+                    <li>Testuj formularze z wyłączonym JavaScript</li>
+                    <li>Zawsze waliduj dane po stronie serwera</li>
+                </ul>
+            </section>
+
+            <footer>
+                <h2>Podsumowanie</h2>
+                <p>Formularze HTML to potężne narzędzie, które doskonale sprawdza się w prostych zastosowaniach i jako fallback dla złożonych rozwiązań. Ich siła leży w prostocie, dostępności i niezawodności. Dla zaawansowanych aplikacji warto rozważyć rozszerzenie funkcjonalności za pomocą JavaScript, ale zawsze zachowując podstawową wersję HTML jako zabezpieczenie.</p>
+                
+                <p><strong>Kluczowa zasada:</strong> Start with HTML, enhance with JavaScript. Zaczynaj od solidnych podstaw HTML, a następnie rozszerzaj funkcjonalność tam, gdzie to konieczne.</p>
+            </footer>
+        </article>
+    </main>
+</body>
+</html>
