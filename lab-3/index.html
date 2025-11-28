@@ -2,11 +2,61 @@
 <html lang="pl">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lab 3</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/polo.css" />
   </head>
   <body>
-    <h1>Lab 3</h1>
-    <a href="..">Powrót</a>
+    <main>
+      <div class="product-card">
+        <div class="container">
+          <input type="radio" id="blue" name="polo-color" value="blue" checked>
+          <input type="radio" id="red" name="polo-color" value="red">
+          <input type="radio" id="green" name="polo-color" value="green">
+          <input type="radio" id="yellow" name="polo-color" value="yellow">
+          <div class="img-container">
+            <img src="assets/polo_b.png" class="polo-img polo-blue" alt="polo blue">
+            <img src="assets/polo_r.png" class="polo-img polo-red" alt="polo red">
+            <img src="assets/polo_g.png" class="polo-img polo-green" alt="polo green">
+            <img src="assets/polo_y.png" class="polo-img polo-yellow" alt="polo yellow">
+          </div>
+          
+          <div class="desc">
+            <div class="title">
+              <h2>Koszulka Polo</h2>
+              <span class="promo">Promocja</span>
+          </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam quis adipisci maiores.</p>
+            <h3>Kolor</h3>
+            <div class="colors-picker">
+              <label for="blue" class="color-switch blue"></label>
+              <label for="red" class="color-switch red"></label>
+              <label for="green" class="color-switch green"></label>
+              <label for="yellow" class="color-switch yellow"></label>
+            </div>
+            <h3>Rozmiar</h3>
+            <div class="sizes-picker">
+              <input type="radio" id="S" name="size" value="S">
+              <label for="S">S</label>
+              <input type="radio" id="M" name="size" value="M">
+              <label for="M">M</label>
+              <input type="radio" id="L" name="size" value="L">
+              <label for="L">L</label>
+              <input type="radio" id="XL" name="size" value="XL">
+              <label for="XL">XL</label>
+            </div>
+            <h3>59,99 zł</h3>
+            <button>
+                  <svg class="cart-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="9" cy="21" r="1"></circle>
+        <circle cx="20" cy="21" r="1"></circle>
+        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+    </svg>
+              Do koszyka</button>
+          </div>
+        </div>
+      </div>
+    </main>
   </body>
 </html>

@@ -1,0 +1,287 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Montserrat;
+}
+
+:root{
+    --blue-color: blue;
+    --red-color: red;
+    --green-color: green;
+    --yellow-color: yellow;
+}
+
+body {
+    background: #fafafa;
+}
+
+main{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.product-card{
+    width: 100%;
+    max-width: 600px;
+    background: #eee;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 18px 18px 32px -5px rgba(66, 68, 90, 1);
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    position: relative;
+    
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+    }
+}
+
+.container > input[type="radio"]{
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.promo {
+    background: #ddd;
+    color: #333;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border: 1px solid #999;
+    transition: all 0.3s ease;
+}
+
+#blue:checked ~ .desc .promo {
+    background: var(--blue-color);
+    color: white;
+    border-color: var(--blue-color);
+}
+
+#red:checked ~ .desc .promo {
+    background: var(--red-color);
+    color: white;
+    border-color: var(--red-color);
+}
+
+#green:checked ~ .desc .promo {
+    background: var(--green-color);
+    color: white;
+    border-color: var(--green-color);
+}
+
+#yellow:checked ~ .desc .promo {
+    background: var(--yellow-color);
+    color: black;
+    border-color: var(--yellow-color);
+}
+
+
+.img-container{
+    width: 100%;
+    max-width: 300px;
+    aspect-ratio: 1 / 1; 
+    border-radius: 8px;
+    background: #fff;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.img-container .polo-img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    opacity: 0;
+    transition: opacity .25s ease;
+}
+
+#blue:checked ~ .img-container .polo-blue{ opacity:1; }
+#red:checked ~ .img-container .polo-red{ opacity:1; }
+#green:checked ~ .img-container .polo-green{ opacity:1; }
+#yellow:checked ~ .img-container .polo-yellow{ opacity:1; }
+
+#blue:checked ~ .img-container{ border-color: var(--blue-color); }
+#red:checked ~ .img-container{ border-color: var(--red-color); }
+#green:checked ~ .img-container{ border-color: var(--green-color); }
+#yellow:checked ~ .img-container{ border-color: var(--yellow-color); }
+
+.desc{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.desc h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.desc p {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+
+.desc h3 {
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+
+.colors-picker{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.color-switch{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid black;
+    position: relative;
+    transition: 0.3s;
+}
+
+.color-switch:hover{
+    transform: scale(0.85);
+}
+
+.color-switch::before,
+.color-switch::after {
+    content: "";
+    position: absolute;
+    inset: -4px;
+    border-radius: 50%;
+    opacity: 0;
+    transition: .3s;
+    pointer-events: none;
+}
+
+.color-switch::after {
+    inset: -6px;
+}
+
+.color-switch.blue{ background: var(--blue-color); }
+.color-switch.red{ background: var(--red-color); }
+.color-switch.green{ background: var(--green-color); }
+.color-switch.yellow{ background: var(--yellow-color); }
+
+#blue:checked ~ .desc .color-switch.blue,
+#red:checked ~ .desc .color-switch.red,
+#green:checked ~ .desc .color-switch.green,
+#yellow:checked ~ .desc .color-switch.yellow {
+    transform: scale(0.85);
+}
+
+#blue:checked ~ .desc .color-switch.blue::before,
+#red:checked ~ .desc .color-switch.red::before,
+#green:checked ~ .desc .color-switch.green::before,
+#yellow:checked ~ .desc .color-switch.yellow::before{
+    opacity: 1;
+    box-shadow: 0 0 0 4px rgba(0,0,0,0.05);
+}
+
+#blue:checked ~ .desc .color-switch.blue::after,
+#red:checked ~ .desc .color-switch.red::after,
+#green:checked ~ .desc .color-switch.green::after,
+#yellow:checked ~ .desc .color-switch.yellow::after{
+    opacity: 1;
+    box-shadow: inset 0 0 0 2px rgba(0,0,0,0.2);
+}
+
+.sizes-picker{
+    display: flex;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.sizes-picker input{
+    opacity: 0;
+    position: absolute;
+}
+
+.sizes-picker label{
+    width: 40px;
+    height: 40px;
+    border: 2px solid black;
+    border-radius: 4px;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.sizes-picker label:hover{
+    transform: scale(1.1);
+}
+
+.sizes-picker input:checked + label{
+    transform: scale(1.1);
+    color: white;
+}
+
+#blue:checked ~ .desc .sizes-picker input:checked + label{
+    background: var(--blue-color);
+}
+#red:checked ~ .desc .sizes-picker input:checked + label{
+    background: var(--red-color);
+}
+#green:checked ~ .desc .sizes-picker input:checked + label{
+    background: var(--green-color);
+}
+#yellow:checked ~ .desc .sizes-picker input:checked + label{
+    background: var(--yellow-color);
+    color: black;
+}
+
+.desc h3:last-of-type {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.desc button{
+    padding: 15px;
+    font-weight: 600;
+    border: 2px solid black;
+    border-radius: 8px;
+    cursor: pointer;
+    color: white;
+    transition: .3s;
+    width: 100%;
+    font-size: 1rem;
+}
+
+.desc button:hover{
+    transform: scale(1.05);
+}
+
+#blue:checked ~ .desc button{ background: var(--blue-color); }
+#red:checked ~ .desc button{ background: var(--red-color); }
+#green:checked ~ .desc button{ background: var(--green-color); }
+#yellow:checked ~ .desc button{ background: var(--yellow-color); color:black; }
