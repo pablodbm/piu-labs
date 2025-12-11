@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 5 - Kształty (Moduły & Observer)</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Kształty</h1>
+        <p>Moduły ES6, Wzorzec Obserwator i LocalStorage</p>
+    </header>
+
+    <div class="controls">
+        <div class="control-group">
+            <button id="add-square" class="btn">Dodaj Kwadrat</button>
+            <button id="add-circle" class="btn">Dodaj Kółko</button>
+        </div>
+        <div class="control-group">
+            <button id="recolor-squares" class="btn secondary">Przekoloruj Kwadraty</button>
+            <button id="recolor-circles" class="btn secondary">Przekoloruj Kółka</button>
+        </div>
+    </div>
+
+    <div class="stats">
+        <div class="stat-box">
+            Liczba kwadratów: <strong id="count-square">0</strong>
+        </div>
+        <div class="stat-box">
+            Liczba kółek: <strong id="count-circle">0</strong>
+        </div>
+    </div>
+
+    <main id="shapes-container" class="shapes-grid">
+        </main>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>
